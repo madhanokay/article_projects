@@ -1,0 +1,147 @@
+React Q&A:
+1) React-ssr:
+react-ssr is a simple and lightweight React server-side rendering solution that abstracts the complexities of server-side rendering React applications away from the codebase. react-ssr adds another optional 'lifecycle' method to your components for fetching data.(Server-side rendering is usually the choice for SEO-dependent websites with static content, while client-side rendering is used to render dynamic content and improve the user experience)
+2) Reconcilation:
+its a programming concept where an ideal, or “virtual”, representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. This process is called reconciliation.
+3) React fiber:
+   Its main goal is to enable incremental rendering of the virtual DOM.
+4) Redux-Thunk & Saga
+   It is a middleware or simply called an async function which is generally used for calling API and storing response data in redux store to remove side effects.(https://www.linkedin.com/pulse/which-better-redux-thunk-redux-saga-vnurture-technologies/)
+
+Normal Questions:
+1) how to javascript handle promises(async ,await whn will use)
+2) Events in javascript /React
+2) Es6 features
+3) object & array destructure
+4) remove duplictaes in array wiyhout using set(https://www.samanthaming.com/tidbits/43-3-ways-to-remove-array-duplicates/)
+5) spread and rest operator
+6) shallow and deep clone
+6) React lifecycle
+7) how many way to access values in React
+8) why need to use functional component insted of class component
+9)  Pure component and avoid re-render
+10) how many types of array method
+11) css inline and inline-block difference
+12) local and session storage
+13) flex display text as center using css(display: flex on main div)
+14) how to remove axios access header change or modify
+9) minified and bundle for webpack in react
+10) Jest sum fo two number example
+11) print location wise cunt of employee
+12) difference between margin and padding css
+13) example for parent and child example
+15) Singleton in javascript(design pattern that tells us that we can create only one instance of a class and that instance can be accessed globally)
+16) Eeger loading vs lazy loading
+17) What is asynchronous and synchronous in JavaScript?
+Asynchronous is a non-blocking architecture, so the execution of one task isn't dependent on another. Tasks can run simultaneously. Synchronous is a blocking architecture, so the execution of each operation is dependent on the completion of the one before it.
+MajorQuestion:
+1) Prototype(prototype are only intended to provide methods for the primitive values, but the wrapper objects should not be directly constructed)
+2) event loops in javascript
+3) debouncing and throttl in javascript
+4) custom events in js
+5) Error handlin in react
+6) custom filter in arry in js
+7) 3 ways to copy object :  
+const person = {
+    firstName: 'John',
+    lastName: 'Doe'
+};
+
+// using spread ...
+let p1 = {
+    ...person
+};
+
+// using  Object.assign() method
+let p2 = Object.assign({}, person);
+
+// using JSON
+let p3 = JSON.parse(JSON.stringify(person));
+9) Convert nested array into single array  const ff = [[[1, [1.1]], 2, 3], [4, 5]];
+ff.flat() one way , ff.flat(Infinity)
+CSSQuestion:
+1) Absolute and relative different for position
+2) flexbox and property
+3) css border box vs content box
+4) ContentBox & BorderBox
+In the content box model, the content inside of element will have the same dimension as the element. In the border box model, the content's dimension has to subtract the border and padding from the element's dimension.
+
+Program:
+1) print reverse number
+for (var i=0;i<5; i++) {
+    (function(i){
+        setTimeout(function(){
+          console.log('value is', i);
+        },3000)
+    })(i);
+}
+2) https://codesandbox.io/s/react-hooks-usestate-forked-ki4zvf?file=/src/index.js
+3) Sum of n number as dynamically
+  const Sum = (a) => (b) => (b ? Sum(a + b) : a);
+4) /* Sum of 2 numbers */
+  const sum = function (a) {
+    return function (b) {
+      return function (c) {
+        return a + b + c;
+      };
+    };
+  };
+  console.log(sum(1)(2)(5));
+5) CountDowntimer:
+     var counter = 10;
+     var newYearCountdown =           setInterval(function(){
+  console.log(counter);
+  counter--
+  if (counter === 0) {
+    console.log("HAPPY NEW YEAR!!");
+    clearInterval(newYearCountdown);
+  }
+}, 1000);
+6) Async/Await:
+ a) const getData = async() => {
+       var data = "Hello World";
+       return data;
+      }
+      getData().then(data =>          console.log(data)); //Hello World
+   b) const getData = async() => {
+        var y = await "Hello World";
+        console.log(y);
+    }
+    console.log(1);
+    getData();
+    console.log(2); ///1, 2, Hello World
+  c) function asynchronous_operational_method() {
+	let first_promise = new Promise((resolve, reject) => resolve("Hello"));
+	let second_promise = new Promise((resolve, reject) => {
+		setTimeout(() => {
+		resolve(" GeeksforGeeks..");
+		}, 1000);
+	});
+	let combined_promise = Promise.all([first_promise, second_promise]);
+	return combined_promise;
+	}
+	
+	async function display() {
+	let data = await asynchronous_operational_method();
+	console.log(data);
+	}
+	display();
+</script>
+7) Max number and second largest element
+let p =[1,2,3];
+let max =Math.max(...p); //3
+p.splice(p.indexOf(max),1);
+Math.max(p) ///2
+
+CodeSnippet:
+1) https://codesandbox.io/s/react-hooks-useeffect-forked-st0j54?file=/src/index.js
+2)  https://codesandbox.io/s/heuristic-water-m67yvd?file=/src/App.js
+3)https://codesandbox.io/s/react-hooks-counter-demo-forked-hlt3ub -->Sorting based on price
+4) https://codesandbox.io/s/react-hooks-counter-demo-forked-094myd?file=/src/index.js --Printpokemon
+5) https://codesandbox.io/s/react-hooks-counter-demo-forked-094myd?file=/src/index.js --Ponkman dropdown
+
+prototypechaning, scope chaning, iisv
+Important Links:
+1) https://www.codingdeft.com/
+2) https://www.positronx.io/react-bootstrap-custom-dropdown-list-with-fetch-api-tutorial/
+3) https://www.geeksforgeeks.org/reactjs-examples/?ref=shm
